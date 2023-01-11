@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Marko Zlatic AS619 Final Project</title>
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.24/esri/themes/light/main.css"/>
+  <link rel="stylesheet" href="ZLATIC_AS619_FinalProjectCSS.css"/>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://js.arcgis.com/4.24/"></script>
+  <script src="ZLATIC_AS619_FinalProjectJS.js"></script>
+
+</head>
+<body>
+<div id="splashscreen">
+    <h2>Marko Zlatic AS430.619 Final Project <br/><br/></h2>
+    <h3>This web application was developed to uphold requirements for the AS619 Final Project.</h3>
+    <h4><br/><br/><br/>Abstract: The primary dataset utilized was the Environmental Justice Screening Method (EJSM) feature layer, developed by USC/Occidental College (EJSM Scores, n.d.). <br/>
+    The feature layer illustrates rankings in four main categories: Climate Change Vulnerability, Hazardous Proximity and Sensitive Land Use, <br/> Health Risk & Exposure, and Social
+    & Health Vulnerability (all being scored from 1 to 5) for individuals living in LA County. <br/> The scores were then calculated and a final cumulative score is given for each census tract in LA County (out of 20). <br/>
+    A secondary map image layer, Community Boundaries of LA County, was integrated to assist users with understanding <br/> the census locations with more relatable nomenclature (ie City of West Hollywood instead of Tract 6037700300).
+    </h4>
+    <h4><br/><br/><br/>Sources:<br/> <br/>
+    Articles:<br/>
+        EJSM Scores. (n.d.). Retrieved August 13, 2022, from https://egis-lacounty.hub.arcgis.com/maps/ejsm-scores <br/>
+        Green Zones Program—EJSM | DRP. (n.d.). Retrieved August 13, 2022, from https://planning.lacounty.gov/greenzones/ejsm <br/>
+        LA County Political Boundaries—Overview. (n.d.). Retrieved August 13, 2022, from https://gisanddata.maps.arcgis.com/home/item.html?id=408b6bb0b4e54b2a85eacc3b0a5883d7 <br/> <br/>
+
+        Datasets: <br/>
+        Layer: Community Boundaries (CSA) (ID: 23). (n.d.). Retrieved August 13, 2022, from https://public.gis.lacounty.gov/public/rest/services/LACounty_Dynamic/Political_Boundaries/MapServer/23<br/>
+        Layer: EJSM Scores (ID:0). (n.d.). Retrieved August 13, 2022, from https://services.arcgis.com/RmCCgQtiZLDCtblq/arcgis/rest/services/EJSM_Scores/FeatureServer/0<br/> <br/>
+
+        JHU Logo Source: <br/>
+        TopOpt – The JHU Topology Optimization Group. (n.d.). Retrieved August 16, 2022, from https://www.ce.jhu.edu/topopt/ <br/>
+
+    </h4>
+    <button href="#" class="enter_link">Click here to View WebApp</button>
+</div>
+<div id="header">
+  <div>
+      <p id="logo" style="float: left"><img id="image" src="https://www.ce.jhu.edu/topopt/wp-content/uploads/2019/10/Jam-shield-white-01.png" alt="alternate_text"> </p>
+      <p id="titleName"> AS619 Final Project: Los Angeles County Environmental Justice Results WebApp Viewer</p>
+  </div>
+  <button id="legendButton"> Toggle Legend Widget </button>
+  <button id="layerListButton"> Toggle List Layer Widget </button>
+  <button id="queryButton"> Toggle Query Button </button>
+</div>
+<div id="viewDiv"></div>
+<div id="layerToggle">
+  <div id="climateToggle">
+    <span id="climateLayer" class="esri-widget"> <input type="checkbox" id="climateButton" class="on"> Climate Change Vulnerability</span>
+  </div>
+  <div id="hazardToggle">
+    <span id="hazardLayer" class="esri-widget"> <input type="checkbox" id="hazardButton" class="off"> Hazard Proximity & Sensitive Land</span>
+  </div>
+  <div id="socialToggle">
+    <span id="socialLayer" class="esri-widget"> <input type="checkbox" id="socialButton" class="off"> Social & Health Vulnerability</span>
+  </div>
+  <div id="healthToggle">
+    <span id="healthLayer" class="esri-widget"> <input type="checkbox" id="healthButton" class="off"> Health Risk & Exposure</span>
+  </div>
+</div>
+<span id="communityToggle" class="esri-widget"> <input type="checkbox" id="communityLayer"> Toggle Community Layer</span>
+
+<form id="queryCIscore">
+  <div>Filter by Cumulative Score<br/></div><br/><br/>
+  <div id="boldDiv">Cumulative Score is: </div><br/>
+  <label for="queryOptions">Select Operator</label>
+  <select id="queryOptions" name="queryOptions" value ="">
+    <option> No Query Selected </option>
+    <option> Greater Than (>) </option>
+    <option> Less Than (<) </option>
+    <option> Greater Than or Equal To (>=) </option>
+    <option> Less Than or Equal To (<=) </option>
+    <option> Equal to (=)</option>
+  </select>
+  <p id="defaultOption"></p>
+  <label for="numScore">Input Score (1 - 20)</label>
+  <input type="number" id="numScore" name="numScore" value="" size="20" max="20" min="0">
+  <p id="defaultNum"></p>
+  <button id="executeQuery">Execute Query</button>
+  <input type="reset" id="clearQuery">
+</form>
+
+</body>
+</html>

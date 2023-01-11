@@ -1,0 +1,133 @@
+html,
+body,
+
+#header {
+    background-color: #0008ff;
+}
+
+#logo, #titleName {
+    top: 0;
+    display: inline-block;
+}
+
+#titleName {
+    margin-left: 10px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#image {
+    top: 0;
+    height: 25px;
+    width: 25px;
+}
+
+#legendButton {
+    top: 20px;
+    right: 230px;
+    position: absolute;
+    font-weight: bold;
+}
+
+#layerListButton {
+    top: 20px;
+    right: 30px;
+    position: absolute;
+    font-weight: bold;
+}
+
+#queryButton {
+    top: 20px;
+    right: 412px;
+    position: absolute;
+    font-weight: bold;
+}
+
+#viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 93%;
+    width: 99%;
+    position: absolute;
+    outline: 3px solid black;
+}
+
+#layerToggle {
+    top: 70px;
+    right: 20px;
+    height: 200px;
+    width: 295px;
+    position: absolute;
+    z-index: 99;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 8px;
+    opacity: 0.9;
+}
+
+span {
+    display: inline-block;
+    border: 2px;
+    margin: 12px;
+}
+
+#communityToggle {
+    top: 280px;
+    right: 5px;
+    width: 313px;
+    position: absolute;
+    z-index: 99;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 10px;
+    opacity: 0.9;
+}
+
+#splashscreen {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #FFFFFF;
+}
+
+#queryCIscore {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    background-color: #FFFFFF;
+    outline: 4px solid darkgrey;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+}
+
+input,
+label {
+    margin: 0.4rem 0;
+}
+
+#queryOptions {
+    margin-top: 3px;
+    margin-bottom: 15px;
+}
+
+#executeQuery {
+    margin-left: 5px;
+}
+
+#clearQuery {
+    margin-left: 15px;
+}
+
+#executeQuery, #clearQuery {
+    display: inline-block;
+}
+
+#boldDiv {
+    font-weight: bold;
+}
